@@ -1,0 +1,32 @@
+lass screenPt{
+private:
+GLint x,y;
+puclic:
+         screenPt(){
+         x=y=0;
+         }
+    void setCoords (GLint xCoordValue, GLint yCoordValue){
+             x= xCoordValue;\
+             y= yCoordValue;''
+    }
+GLint getx() const{
+            return x;
+}
+GLint gety() const{
+     return y;
+
+}
+void incrementx() {
+   x++;
+}
+ void decrementy(){
+ y--;
+ }
+};
+
+void setPixel (GLint xCoord, GLint yCoord)
+{
+    glBegin(GL_POINTS);
+    glVertex2i(xCoord, yCoord);
+    glEND[];
+}
