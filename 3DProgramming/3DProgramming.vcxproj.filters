@@ -25,4 +25,9 @@
   <ItemGroup>
     <Text Include="3주차과제.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObjects.hpp">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
