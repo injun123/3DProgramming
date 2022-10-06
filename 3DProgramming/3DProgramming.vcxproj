@@ -149,6 +149,7 @@
     <Text Include="3주차과제.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameCore.h" />
     <ClInclude Include="GameObjects.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

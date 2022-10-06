@@ -1,12 +1,19 @@
-﻿#include <GLFW/glfw3.h>
+﻿#include <chrono>
+#include <thread>
+#include <string>
+#include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include "GameObjects.hpp"
 
 #pragma comment(lib, "OpenGL32")
 
+using namespace std;
+
+chrono::system_clock::time_point startRenderTimePoint;
+chrono::duration<double> renderDuration;
 
 GLFWwindow* window;
-FireBall* f;
+MagicCircle* f;
 
 void Init();
 void Update();
@@ -23,7 +30,7 @@ void Init()
     glfwSetErrorCallback(error_callback);
     if (!glfwInit())
         exit(EXIT_FAILURE);
-    window = glfwCreateWindow(640, 480, "Simple example", NULL, NULL);
+    window = glfwCreateWindow(720, 720, "Simple example", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -36,7 +43,8 @@ void Init()
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    f = new FireBall();
+    startRenderTimePoint = chrono::system_clock::now();
+    f = new MagicCircle();
 }
 
 void Release()
@@ -79,6 +87,13 @@ void Update()
 
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        renderDuration = chrono::system_clock::now() - startRenderTimePoint;
+        startRenderTimePoint = chrono::system_clock::now();
+        string fps = "FPS : " + to_string(1.0 / renderDuration.count());
+        cRenderer.DrawString(fps);
+
+        this_thread::sleep_for(chrono::milliseconds(20));
     }
 }
 

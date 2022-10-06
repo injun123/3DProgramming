@@ -29,5 +29,8 @@
     <ClInclude Include="GameObjects.hpp">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="GameCore.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
