@@ -141,13 +141,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="3DProgramming.cpp" />
-    <ClCompile Include="6주차과제.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="3주차과제.txt" />
+    <Text Include="6주차과제.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

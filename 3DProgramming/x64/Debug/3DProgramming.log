@@ -10,5 +10,5 @@ C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(107,68
           [
               T=float
           ]
-C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(246,19): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(220,19): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   3DProgramming.vcxproj -> C:\Users\elfle\source\repos\3DProgramming\x64\Debug\Lecture03.exe
