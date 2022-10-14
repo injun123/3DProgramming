@@ -40,8 +40,10 @@ Vertex transformedCircle[360];  // 화면에 그려질 원
 Transform transform;  //world 행렬이 될 transform
 
 //<문제>////////전역변수 쓰는곳////////////////////////////////////////////////////////////
-
-        
+float TransX = 0;
+float Angle = 0;
+float Scale = 1;
+float PlusS = 0.01;
 
 
  //////////////////////////////////////////////////////////////////////////////////////////
@@ -145,17 +147,36 @@ void Update()
 {
     while (!glfwWindowShouldClose(window))
     {
-        //Update로직
-        //<문제>//////////////////////////////////////////////////////////////////////////////////
+    //이동
+        transform.translate = glm::mat3(
+            1, 0, 0,
+            0, 1, 0,
+            TransX, 0, 1
+        );
+        TransX += 0.001;
+    //회전
+        Angle += 1;
+        transform.rotation = glm::mat3(
+            glm::cos(glm::radians(Angle)), -glm::sin(glm::radians(Angle)), 0,
+            glm::sin(glm::radians(Angle)), glm::cos(glm::radians(Angle)), 0,
+            0,0,1
+            );
+        //크기
+        Scale += PlusS;
+        transform.scale = glm::mat3(
+            Scale, 0, 0,
+            0, Scale , 0,
+            0, 0 ,     1 
+        );
+        if (Scale >= 1.3)
+        {
+            PlusS -= 0.01;
+        }
+        else if (Scale <= 0.7)
+        {
+            PlusS += 0.01;
+        };
 
-        //1. translate 를 프레임당 오른쪽으로 0.001씩 누적시켜서 물체를 이동해보세요.
-        //2. Rotation 을 프레임당 1도씩 누적시켜서 물체를 회전시켜보세요.
-        //3. Scale은 초당 0.01씩 최대 1.3배까지 늘어났다가 0.7배까지 줄어들도록 만드시오 (반복)
-        //   (1.3배 이상이 되면 줄어들고 0.7배 이하가 되면 다시 늘어나게 만드시오)
-
-      
-        //////////////////////////////////////////////////////////////////////////////////////////
-        
         for (int i = 0; i < 360; i++)
         {
             transformedCircle[i].pos = transform.translate * transform.rotation * transform.scale * circle[i].pos;

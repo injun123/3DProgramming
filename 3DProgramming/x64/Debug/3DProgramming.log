@@ -1,14 +1,18 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(3DProgramming.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(3DProgramming.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
   3DProgramming.cpp
-C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(106,69): warning C4244: '=': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(46,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(108,69): warning C4244: '=': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               T=float
           ]
-C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(107,68): warning C4244: '=': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(109,68): warning C4244: '=': 'double'에서 'T'(으)로 변환하면서 데이터가 손실될 수 있습니다.
           with
           [
               T=float
           ]
-C:\Users\elfle\source\repos\3DProgramming\3DProgramming\3DProgramming.cpp(220,19): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  3DProgramming.vcxproj -> C:\Users\elfle\source\repos\3DProgramming\x64\Debug\Lecture03.exe
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(156,24): warning C4305: '+=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(173,26): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(177,26): warning C4305: '+=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\hij04\OneDrive\바탕 화면\아아\3DProgramming\3DProgramming.cpp(241,19): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  3DProgramming.vcxproj -> C:\Users\hij04\OneDrive\바탕 화면\아아\x64\Debug\Lecture03.exe
